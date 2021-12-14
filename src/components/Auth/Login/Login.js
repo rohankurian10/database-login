@@ -9,6 +9,7 @@ const Login = () => {
       </div>
       <div className="Button-Container">
         <button>LOGIN</button>
+        <p>Not Registered? Register</p>
       </div>
     </div>
   );

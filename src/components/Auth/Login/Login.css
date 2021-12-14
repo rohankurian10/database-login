@@ -19,8 +19,9 @@
 
 .Button-Container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 30%;
 }
@@ -44,6 +45,11 @@
   transition: 0.25s;
   font-size: 1.2rem;
   font-weight: 700;
+  color: #eeeeee;
+}
+
+.Button-Container p {
+  font-size: 0.85rem;
   color: #eeeeee;
 }
 
