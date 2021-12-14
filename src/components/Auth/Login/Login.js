@@ -1,8 +1,12 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="Login">
+      <div className="Header-Container">
+        <h1>Login</h1>
+      </div>
       <div className="Input-Container">
         <input placeholder="email" type="email"></input>
         <input placeholder="password" type="password"></input>
@@ -10,7 +14,7 @@ const Login = () => {
       <div className="Button-Container">
         <button>LOGIN</button>
         <div>
-          <a href="/registration">Not Registered? Register</a>
+          <Link to="/registration">Not Registered? Register</Link>
         </div>
       </div>
     </div>

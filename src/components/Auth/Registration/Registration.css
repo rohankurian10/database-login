@@ -1,10 +1,19 @@
 .Registration {
   background-color: #323232;
-  height: 30rem;
+  height: 35rem;
   width: 30rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+}
+.Registration .Header-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Registration .Header-Container h1 {
+  color: #eeeeee;
 }
 
 .Registration .Input-Container {
