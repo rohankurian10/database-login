@@ -1,7 +1,13 @@
-import React from "react";
+import "./Login.css";
 
 const Login = () => {
-  return <div></div>;
+  return (
+    <div className="">
+      <input></input>
+      <input></input>
+      <button></button>
+    </div>
+  );
 };
 
 export default Login;
