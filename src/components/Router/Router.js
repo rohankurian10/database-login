@@ -6,7 +6,7 @@ import Login from "../Auth/Login/Login";
 const Router = () => {
   return (
     <BrowserRouter>
-      <div className="Router">
+      <>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -18,7 +18,7 @@ const Router = () => {
             <Registration />
           </Route>
         </Switch>
-      </div>
+      </>
     </BrowserRouter>
   );
 };
