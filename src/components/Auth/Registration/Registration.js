@@ -10,7 +10,7 @@ const Registration = () => {
         <input type="password" placeholder="confirm password"></input>
       </div>
       <div className="Button-Container">
-        <button>Register</button>
+        <button>REGISTER</button>
         <div>
           <a href="/login">Already Registered? Login</a>
         </div>
