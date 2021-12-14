@@ -9,7 +9,9 @@ const Login = () => {
       </div>
       <div className="Button-Container">
         <button>LOGIN</button>
-        <p>Not Registered? Register</p>
+        <div>
+          <a href="/registration">Not Registered? Register</a>
+        </div>
       </div>
     </div>
   );

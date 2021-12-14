@@ -11,7 +11,9 @@ const Registration = () => {
       </div>
       <div className="Button-Container">
         <button>Register</button>
-        <p>Already Registered? Login</p>
+        <div>
+          <a href="/login">Already Registered? Login</a>
+        </div>
       </div>
     </div>
   );

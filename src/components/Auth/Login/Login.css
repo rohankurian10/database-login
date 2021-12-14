@@ -8,7 +8,7 @@
   border-radius: 1rem;
 }
 
-.Input-Container {
+.Login .Input-Container {
   width: 100%;
   height: 70%;
   display: flex;
@@ -17,16 +17,16 @@
   justify-content: space-evenly;
 }
 
-.Button-Container {
+.Login .Button-Container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   width: 100%;
   height: 30%;
 }
 
-.Login input {
+.Login .Input-Container input {
   border-radius: 1rem;
   background-color: #404040;
   border: 0;
@@ -36,7 +36,7 @@
   color: #eeeeee;
 }
 
-.Login button {
+.Login .Button-Container button {
   background-color: #0d7377;
   border-radius: 1rem;
   border: 0;
@@ -48,11 +48,11 @@
   color: #eeeeee;
 }
 
-.Button-Container p {
+.Login .Button-Container a {
   font-size: 0.85rem;
   color: #eeeeee;
 }
 
-.Login button:hover {
+.Login .Button-Container button:hover {
   background-color: #14ffec;
 }
