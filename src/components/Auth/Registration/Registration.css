@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 80%;
+  height: 70%;
 }
 
 .Registration .Button-Container {
@@ -29,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 20%;
+  height: 25%;
 }
 
 .Input-Container input {
