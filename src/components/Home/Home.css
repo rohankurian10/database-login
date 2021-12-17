@@ -10,3 +10,22 @@
 .Home h1 {
   color: #eeeeee;
 }
+
+.Home button {
+  background-color: #0d7377;
+  border-radius: 1rem;
+  border: 0;
+  height: 3rem;
+  width: 10rem;
+  transition: 0.25s;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.abc {
+  color: #eeeeee;
+}
+
+.Home button:hover {
+  background-color: #14ffec;
+}
