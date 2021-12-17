@@ -29,3 +29,9 @@
 .Home button:hover {
   background-color: #14ffec;
 }
+
+.Home .Button-Container {
+  width: 30rem;
+  display: flex;
+  justify-content: space-evenly;
+}
