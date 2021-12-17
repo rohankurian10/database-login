@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 const Registration = () => {
-  let validation = () => {
-    let name = reg.name.value;
+  let name = useRef("");
+  let validation = (e) => {
+    e.preventDefault();
+    let namee = name.current.value;
+    console.log(namee);
   };
-
   return (
     <div className="Registration">
       <form name="reg" className="Form-Container">
@@ -14,24 +16,10 @@ const Registration = () => {
           <h1>Registration</h1>
         </div>
         <div className="Input-Container">
-          <input name="name" ref={name} type="text" placeholder="name"></input>
-          <input
-            name="email"
-            ref={email}
-            type="email"
-            placeholder="email"
-          ></input>
-          <input
-            name="password"
-            ref={password}
-            type="password"
-            placeholder="password"
-          ></input>
-          <input
-            ref={confirmPassword}
-            type="password"
-            placeholder="confirm password"
-          ></input>
+          <input ref={name} type="text" placeholder="name"></input>
+          <input type="email" placeholder="email"></input>
+          <input type="password" placeholder="password"></input>
+          <input type="password" placeholder="confirm password"></input>
         </div>
         <div className="Button-Container">
           <button onClick={validation}>REGISTER</button>
