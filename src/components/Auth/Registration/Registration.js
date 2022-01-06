@@ -1,14 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Registration.css";
 import { useRef } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Registration = () => {
+  let [nameValue, setNameValue] = useState("");
+
   const abc = useHistory();
   let name = useRef("");
   let email = useRef("");
   let password = useRef("");
   let confirmPassword = useRef("");
+  // console.log("abcc email", email);
 
   let validation = async (e) => {
     e.preventDefault();
@@ -62,6 +66,7 @@ const Registration = () => {
       alert("Passwords do not match");
       errCounter = errCounter + 1;
     }
+
     if (errCounter === 0) {
       await fetch(
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBntp0o7RNhCRWfA7TV4wJIH77fhfaLct4",
@@ -91,6 +96,28 @@ const Registration = () => {
       return false;
     }
   };
+  let nameVal = (e) => {
+    setNameValue(e.target.value);
+    // console.log(nameValue);
+    if (nameValue === "") {
+      console.log("Validation Failed");
+    } else if (nameValue.indexOf("@") < 0) {
+      console.log("Validation Failed");
+    } else {
+      console.log("Validation Success");
+    }
+  };
+  let nameVal1 = () => {
+    if (nameValue === "") {
+      console.log("Validation Failed");
+      return true;
+    } else if (nameValue.indexOf("@") < 0) {
+      console.log("Validation Failed");
+      return true;
+    } else {
+      console.log("Validation Success");
+    }
+  };
   return (
     <div className="Registration">
       <form
@@ -104,7 +131,15 @@ const Registration = () => {
         </div>
         <div className="Input-Container">
           <input ref={name} type="text" placeholder="name"></input>
-          <input ref={email} type="email" placeholder="email"></input>
+          <input
+            className={
+              nameVal1() && nameValue.length > 0 && "Input-Container-red"
+            }
+            onChange={(e) => nameVal(e)}
+            ref={email}
+            type="email"
+            placeholder="email"
+          ></input>
           <input ref={password} type="password" placeholder="password"></input>
           <input
             ref={confirmPassword}

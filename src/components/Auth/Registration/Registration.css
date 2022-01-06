@@ -43,6 +43,17 @@
   font-size: 1rem;
   color: #eeeeee;
 }
+.Input-Container-red {
+  border-radius: 1rem;
+  background-color: rgb(54, 10, 10) !important;
+  border: 0;
+  height: 4rem;
+  width: 25rem;
+  font-size: 1rem;
+  
+  border: 1px red solid!important; 
+  color: #eeeeee;
+}
 
 .Button-Container button {
   background-color: #0d7377;
