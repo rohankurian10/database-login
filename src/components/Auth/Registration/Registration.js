@@ -36,7 +36,6 @@ const Registration = () => {
       errCounter = errCounter + 1;
       console.log("last name", errCounter);
     } else {
-      // console.log(`Last name Validation Success`);
     }
     if (emailValue === "") {
       alert("Email cannout be empty");
