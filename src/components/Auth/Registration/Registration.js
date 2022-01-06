@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Registration.css";
-import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Registration = () => {
+  const abc = useHistory();
   let name = useRef("");
   let email = useRef("");
   let password = useRef("");
@@ -18,9 +20,11 @@ const Registration = () => {
     let emailValue = email.current.value;
     let passwordValue = password.current.value;
     let confirmPasswordValue = confirmPassword.current.value;
-    console.log(passwordValue, confirmPasswordValue);
+    // console.log(passwordValue, confirmPasswordValue);
+
     if (firstName.length > 10) {
       errCounter = errCounter + 1;
+      console.log("name", errCounter);
     } else {
       // console.log(`First Name Validation Success`);
     }
@@ -30,6 +34,7 @@ const Registration = () => {
       console.log(errCounter);
     } else if (lastName.length > 10) {
       errCounter = errCounter + 1;
+      console.log("last name", errCounter);
     } else {
       // console.log(`Last name Validation Success`);
     }
@@ -80,6 +85,8 @@ const Registration = () => {
 
         // Displaying results to console
         .then((json) => console.log(json));
+
+      abc.push("/login");
       return true;
     } else {
       return false;
@@ -109,7 +116,7 @@ const Registration = () => {
         <div className="Button-Container">
           <button type="submit">REGISTER</button>
           <div>
-            <Link to="/login">Already Registered? Login</Link>
+            <a onClick={() => abc.push("/login")}>Already Registered? Login</a>
           </div>
         </div>
       </form>
