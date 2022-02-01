@@ -2,7 +2,7 @@
   "name": "database-login",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rohankurian10.github.io",
+  "homepage": "https://rohankurian10.github.io/database-login",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
